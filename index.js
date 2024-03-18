@@ -8,7 +8,9 @@ app.use(bodyParser.json());
 
 app.post("/bfhl", (req, res) => {
   try {
-    const inputArray = req.body.array;
+    console.log(req.body)
+    const inputArray = req.body.data;
+    console.log(typeof inputArray)
 
     if (!Array.isArray(inputArray)) {
       return res.status(400).json({
@@ -28,7 +30,7 @@ app.post("/bfhl", (req, res) => {
     res.status(201).json({
       is_success: true,
       user_id: userId,
-      email_id: "john@example.com",
+      email_id: "Rishi1809.be21@chitkara.edu.in",
             college_roll_number: "123456", 
       even_numbers: evenNumbers,
       odd_numbers: oddNumbers,
